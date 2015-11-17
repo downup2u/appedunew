@@ -27,10 +27,19 @@ Template.qnfeedbackxz.helpers({
 
 Template.qnfeedbackxz.events({
     'click input[type="radio"]':function(event){
+        event.preventDefault();
         var qid = $(event.target).attr('name');
         if($('#'+qid).hasClass('uncheck')){
             $('#'+qid).removeClass('uncheck');
         }
+    },
+    'click .jcd_form_chickbox_lnk':function(event){
+        event.preventDefault();
+        var curel = $(event.target);
+        $.each($('.jcd_form_chickbox_lnk',curel.parent()),function(){
+            $(this).removeClass('sel');
+        });
+        curel.addClass('sel');
     },
     'click #qnxzbtn':function(event){
        event.preventDefault();

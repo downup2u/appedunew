@@ -27,13 +27,14 @@
     <header id="header">
         <a href="/questionnaire" class="back"><span></span></a>
         <span class="title">问卷调查</span>
+        <a id="qnxzbtn" class="rightLnk">完成</a>
     </header>
     <section id="content">
         <div class="qnfeedbackxz">
             <div class="title">{{questionnairexq.qnairetitle}}</div>
             <section class="jcd_form">
                 {{#each questionnairexq.questionlist}}
-                <section class="jcd_form_chickbox jcd_form_block" id="{{questionid}}">
+                <section class="jcd_form_chickbox jcd_form_block uncheck" id="{{questionid}}">
                     <div class="questioncontent"><span>{{questioncontent}}</span></div>
                     {{#each answerlist}}
                     <label class='jcd_form_chickbox_lnk'><input class="c_checkbox_1" type="radio" name="{{questionid}}" value="{{index}}"/>{{answercontent}}</label>
