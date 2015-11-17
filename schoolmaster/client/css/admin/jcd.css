@@ -1,0 +1,75 @@
+/*admin*/
+body{background: #FFF}
+*{font: 14px/1.5 "\5FAE\8F6F\96C5\9ED1";list-style: none;outline: none;text-decoration: none}
+a:hover,a:active,a:visited{text-decoration: none}
+ul,li,p{padding: 0}
+.jcd_admin_head{ height: 50px; background: #3C8DBC;position: relative;z-index: 1000}
+.jcd_admin_head .jcd_admin_logo_con{width: 180px;height: 50px;background: #367FA9;text-align: center;}
+.jcd_admin_head .jcd_admin_logo_con span{font-size: 18px;line-height: 50px; color: #FFF}
+
+.jcd_admin_title{font-size: 26px;margin-bottom: 10px;position: relative;}
+
+/*左侧导航*/
+.jcd_admin_sidebar{width:180px;background: #222D32;position: absolute;top:50px;left: 0}
+.jcd_admin_sidebar .jcd_admin_sidebar_ul {}
+.jcd_admin_sidebar .jcd_admin_sidebar_ul li a{display:block;color: #FFF;height: 44px;line-height: 44px;padding-left: 40px}
+.jcd_admin_sidebar .jcd_admin_sidebar_ul li a.sel{background-image: url('images/admin/sidebarBg.png');background-repeat: repeat-y; background-position: left;}
+.jcd_admin_sidebar .jcd_admin_sidebar_ul li a:hover{background: #2C3B41}
+.jcd_admin_sidebar .jcd_admin_sidebar_ul li a.sel:hover{background-image: url('images/admin/sidebarBg.png');background-repeat: repeat-y; background-position: left;}
+.jcd_admin_sidebar .jcd_admin_sidebar_ul li span{margin-right: 10px}
+.jcd_admin_sidebar .jcd_icon{display: inline-block;width: 15px;height: 15px;vertical-align: center; position: relative; top: 1px;}
+.jcd_admin_sidebar .jcd_icon_offsell{background-image: url('images/admin/offsell.png'); background-repeat: no-repeat;width: 15px;height: 14px;background-size: 15px 14px}
+.jcd_admin_sidebar .jcd_icon_bonus{background-image: url('images/admin/bonus.png'); background-repeat: no-repeat;background-position: center 2px;width: 14px;height: 18px;top:2px;}
+/*内容部分*/
+.jcd_admin_content {}
+.jcd_admin_text{padding:20px}
+.jcd_admin_text .jdc_admin_table th,
+.jcd_admin_text .jdc_admin_table td{padding:10px 5px;text-indent: 5px;border-bottom: 1px solid #EEE}
+.jcd_admin_text .jdc_admin_table th{background-color: #f5f5f5;border-color: #ddd}
+.jcd_admin_text .jdc_admin_table td{text-indent: 0;padding-left: 10px;padding-right: 0;}
+.jcd_admin_addbtn {position: absolute;right: 0;}
+.jdc_admin_table_right{padding-right: 10px;text-align: right;}
+.jcd_admin_text .jdc_admin_table td.jdc_admin_table_right,
+.jcd_admin_text .jdc_admin_table th.jdc_admin_table_right{padding-right: 10px}
+
+/*红包详情界面*/
+.jcd_redpackage_con{overflow: hidden;margin-bottom: 10px;}
+.jcd_redpackage_con .redImg{float: left;margin-right: 20px}
+.jcd_redpackage_con .online .redImgCon {background: url('images/admin/redpackage.png');height:157px;width: 233px;text-align: center;line-height:200px;color: #FFF;font-size: 30px;}
+.jcd_redpackage_con .online .redImgCon b{font-size: 36px;color: #FFF;}
+.jcd_redpackage_con .banOnline .redImgCon {background: url('images/admin/redpackage2.png');height:157px;width: 233px;text-align: center;line-height:200px;color: #FFF;font-size: 30px;}
+.jcd_redpackage_con .banOnline .redImgCon b{font-size: 36px;color: #FFF;}
+.jcd_redpackage_con .redPackageLnk a{margin-right: 20px}
+.jcd_redpackage_con .redTxt p span{color: #999}
+
+footer{padding-left:180px;text-align:center;color: #CCC}
+*{font-family:"\5FAE\8F6F\96C5\9ED1"}
+#jcd_admin_container input{outline:none}
+#jcd_admin_container #jcd_admin_loginform{width:700px;height: 330px;margin: auto;}
+#jcd_admin_container .jcd_admin_t {text-align:center;font-size:22px;color:#FFF;margin-bottom:10px;}
+#jcd_admin_container .jcd_form{background:url(images/admin/login.png) no-repeat;height:260px;margin-bottom:15px;position:relative}
+#jcd_admin_container .jcd_dmin_foot{text-align:center;font-size:14px;color:#80B3E5;}
+#jcd_admin_container .jcd_admin_loginName,
+#jcd_admin_container .jcd_admin_loginBtn,
+#jcd_admin_container .jcd_admin_loginPwd{background:#FFF;position:absolute;top:50px;right:140px;padding-left:30px;}
+#jcd_admin_container .jcd_admin_loginPwd{top:100px;right:140px;}
+#jcd_admin_container .jcd_admin_loginBtn{top:170px;right:140px;width:230px;padding:0;background:none}
+#jcd_admin_container .jcd_admin_loginBtn .jcd_adminLogin_subBtn{width:110px;background:#096;color:#FFF;margin-right:10px;}
+#jcd_admin_container .jcd_admin_loginBtn a.jcd_admin_forgetPwd{color:#FFF;text-decoration:none;}
+#jcd_admin_container .jcd_admin_loginBtn .jcd_admin_register{color:#FFF;margin-right: 10px;}
+#jcd_admin_container .jcd_form input{background:none;border:none;padding:10px;width:200px;}
+#jcd_admin_container .jcd_admin_loginName_img{background:url(images/admin/loginBg.png) no-repeat;display:block;position:absolute;width:18px;height:18px;left:10px;top:10px}
+#jcd_admin_container .jcd_admin_loginPwd .jcd_admin_loginName_img{background-position:left -113px;}
+
+
+.jcd_admin_head #admin_user{position: absolute;right: 10px;top:0;height: 50px;cursor: pointer;}
+.jcd_admin_head #admin_user .admin_user_con{color: #FFF;line-height: 50px;font-size: 20px;display: block;height: 50px;padding:0 10px}
+.jcd_admin_head #admin_user .admin_user_con_hover{olor: #FFF;line-height: 50px;font-size: 20px;display: block;height: 50px;padding:0 10px;background: #367FA9}
+.jcd_admin_head #admin_user .admin_user_list {position: absolute;right: 0;top: 50px;background: #367FA9;display: none}
+.jcd_admin_head #admin_user .admin_user_list a{color: #FFF;display: block;padding:5px 10px;width: 100px;text-align: center}
+.jcd_admin_head #admin_user .admin_user_list a:hover{background: #307096}
+
+
+/*登录注册界面*/
+.school_login_page {padding-left:50%;position: relative;}
+.school_login_pagebg{background-color: #009966; position: absolute;left: 0;top:0;z-index: 100;width: 50%}

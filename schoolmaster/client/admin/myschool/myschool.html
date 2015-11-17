@@ -1,0 +1,34 @@
+<template name="myschool">
+  <div class='jcd_admin_title'>
+  学校列表
+  	<a href="/addschool/myschool" class='btn btn-primary jcd_admin_addbtn'><span class='glyphicon glyphicon-plus'></span> 新增学校</a>
+</div>
+<div class="panel panel-default">
+  <!-- Table -->
+  <table class='table jdc_admin_table'>
+    <tr>
+      <th>学校名</th>
+      <th>地址</th>
+      <th>创建日期</th>
+      <th>创建者</th>
+      <th>操作</th>
+    </tr>
+    {{#each schoollist}}
+    <tr>
+      <td>{{name}}</td>
+      <td>{{address}}</td>
+      <td>{{createtime}}</td>
+      <td>{{createusername}}</td>
+      <td class='jdc_admin_table_right'>
+      {{#if curschool}}
+      当前学校
+      {{else}}
+      <a href="#" id="btnswitch">切换到当前</a>
+      {{/if}}
+      <a href="/updateschool/{{_id}}" class='btn btn-primary jcd_admin_addbtn'><span class='glyphicon glyphicon-plus'></span> 编辑</a>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
+</template>

@@ -1,0 +1,22 @@
+<template name="headerteachers">
+ <div class='jcd_admin_title'>
+    班主任列表
+  </div>
+  <div class="panel panel-default">
+    <!-- Table -->
+    <table class='table jdc_admin_table'>
+      <tr>
+        <th>姓名</th>
+        <th>班级</th>
+        <th>手机</th>
+      </tr>
+      {{#each teacherlist}}
+      <tr>
+        <td><a href="/classterminfo/{{_id}}">{{truename}}</a></td>
+        <td>{{classtermname}}</td>
+        <td>{{phonenumber}}</td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</template>

@@ -1,0 +1,52 @@
+<!--新增一个班级
+说明：班主任新增班级
+-->
+<template name="createclasstermsetclassterm">
+    <header id="header">
+        <a href="/{{returnurl}}" class="back"><span></span></a>
+        <span class="title">设置班级</span>
+    </header>
+    <section id="content">
+        <section class="createclasstermsetclassterm">
+            <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+                <div class="n">{{schoolname}}</div>
+                <div class="s">
+                    <select class="select" id="selclass" data-tmp="">
+                        {{#each classterms}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="addNewClassroomForm">
+                    <input class="admin" id="classtermname" value="" maxlength="20" placeholder="请输入班级名">
+                    <a href="#" id="btncreateclass" class="yyBtn">确定</a>
+                </div>
+                <a href="#" class="addNewClassroom">新增班级</a>
+                <a href="#" id="btnaddclass" class="yyBtn">确定加入</a>
+                <!--<section class="lcon user_input telephone_area">
+                    <div class="form_mod form_select">
+                        <label for="">班级</label>
+                        <select class="select" id="selclass" data-tmp="">
+                            {{#each classterms}}
+                                <option value="{{_id}}">{{name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="gift_btn" style="margin-left:20px; margin-right:20px">
+                        <a href="#" id="btnaddclass" title="会员登录">加入班级</a>
+                    </div>
+                </section>-->
+
+                <!--<section class="lcon user_input telephone_area">
+                    <section class="lcon pass_input">
+                        <input class="admin" id="classtermname" value="" maxlength="20" placeholder="班级名">
+                    </section>
+                    <div class="gift_btn" style="margin-left:20px; margin-right:20px">
+                        <a href="#" id="btncreateclass" title="会员登录">新建班级</a>
+                    </div>
+                </section>-->
+            </form>
+        </section>
+    </section>
+</template>

@@ -1,0 +1,35 @@
+﻿<template name="adminmainlayout">
+  <header class="jcd_admin_head" style="position: relative">
+    <div class="jcd_admin_logo_con">
+      <span>常州幼儿园长端</span>
+    </div>
+      <div id="admin_user">
+          <span class="admin_user_con"><span class="glyphicon glyphicon-user"></span> admin</span>
+          <p class="admin_user_list">
+            <a href="#" id="btnchangepassword">修改密码</a>
+            <a href="#" id="btnlogout">退出</a>
+          </p>
+      </div>
+  </header>
+  <div class="jcd_admin_body">
+
+    <!-- sidebar start -->
+    <div class="jcd_admin_sidebar">
+      <adminnavbar>
+      {{> yield "adminnavbar"}}
+      </adminnavbar>
+    </div>
+    <!-- sidebar end -->
+
+    <div class="jcd_admin_content">
+      <div class='jcd_admin_text'>
+        <admincontent>
+        {{> yield "admincontent"}}
+        </admincontent>
+      </div>
+    </div>
+    <!-- content end -->
+  </div>
+
+
+</template>

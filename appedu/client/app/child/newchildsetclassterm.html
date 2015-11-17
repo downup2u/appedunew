@@ -1,0 +1,29 @@
+﻿<!--家长新建孩子
+说明：这是个新建孩子表单
+-->
+<template name="newchildsetclassterm">
+    <header id="header">
+        <span class="title">新增孩子</span>
+    </header>
+    <section id="content">
+        <section class="newchildsetclassterm">
+            <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+                <section class="lcon user_input telephone_area">
+                    <div>
+                        <span style="display:block;padding-bottom:10px;font-size:16px;">选择班级</span>
+                        <ul class="jcd_btnselectchild selclassroom">
+                            {{#each classterms}}
+                                {{#if name}}
+                                    <li class='selchild_{{_id}}' data='{{_id}}'>{{name}}</li>
+                                {{/if}}
+                            {{/each}}
+                        </ul>
+                        <input type="hidden" value="" name="selclass" id="selclass"/>
+                    </div>
+                    <br/><br/>
+                    <a href="#" class="yyBtn" id="btnaddclass" title="会员登录">加入班级</a>
+                </section>
+            </form>
+        </section>
+    </section>
+</template>

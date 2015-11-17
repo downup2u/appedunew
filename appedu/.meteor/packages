@@ -1,0 +1,38 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+iron:router
+accounts-password
+alanning:roles
+mrt:moment
+standard-minifiers
+meteor-base
+mobile-experience
+mongo
+blaze-html-templates
+session
+tracker
+logging
+reload
+random
+ejson
+spacebars
+check
+reactive-var
+twbs:bootstrap
+jquery
+#msavin:mongol
+robertlowe:pickadate
+cfs:standard-packages
+cfs:gridfs
+aldeed:template-extension
+china:sweetalert
+yasinuslu:blaze-meta
+hedcet:touch-swipe
+percolate:velocityjs
+percolate:wireframing
+swiper:swiper
+mdg:geolocation

@@ -1,0 +1,60 @@
+﻿<template name="loginselectclassterm">
+	<header id="header">
+        <span class="title">选择自己的班级</span>
+        <a href="#" id="btncreateclassterm" class="rightLnk">添加</a>
+    </header>
+	<section id="content">
+		<div class="loginselectclasstermpage" style="padding: 20px;">
+			<ul class="jcd_btnselectchild">
+				{{#each classtermlist}}
+				{{#if iscurclassterm}}
+				<li class='selchild_{{classtermid}} sel'> <a href="#"><span>{{name}}</span><em>{{schoolname}}</em></a> </li>
+				{{else}}
+				<li class='selchild_{{classtermid}}'> <a href="#"><span>{{name}}</span><em>{{schoolname}}</em></a> </li>
+				{{/if}}
+				{{/each}}
+			</ul>
+            <div class="fb_m">
+				<label style="display: block">
+                    <input name="isnextskip" type="checkbox" value="" class="c_checkbox_1">
+                    下次跳过该页面
+                </label>
+            </div>
+            <br/>
+            <a href="#" id="btnenter" class="yyBtn">进入</a>
+		</div>
+	</section>
+</template>
+
+
+<!--
+<template name="loginselectchild">
+	<header id="header">
+		<span class="category_h_title">选择自己的孩子<a href="/newchild/loginselectchild" class="topnavlnk-right addchild">添加</a></span>
+	</header>
+	<section class="content pad padb">
+		<div>
+			<ul class="jcd_btnselectchild">
+				{{#each mychildlist}}
+				{{#if iscurchild}}
+				<li class='selchild_{{childid}} sel'><span>{{childname}}</span><span>{{classtermname}}</span><span>{{schoolname}}</span> </li>
+				{{else}}
+				<li class='selchild_{{childid}}'><span>{{childname}}</span><span>{{classtermname}}</span><span>{{schoolname}}</span> </li>
+				{{/if}}
+				{{/each}}
+			</ul>
+			<input type="hidden" value="" id="childId" />
+		</div>
+		<div class="feed_back chickbox-aggree">
+			<div class="fb_m" style="margin-left:15px;">
+				<label for="">
+					<input name="" type="checkbox" value="" class="c_checkbox_1" style="border-radius:5px">
+					<span style="line-height:24px;">自动登录</span> </label>
+			</div>
+		</div>
+		<div><br/>
+		</div>
+		<section class="gift_btn" style="margin-left:15px; margin-right:15px;clear:both"> <a href="#" style="color:#FFF" id="btnenter">进入</a> </section>
+	</section>
+</template>
+-->

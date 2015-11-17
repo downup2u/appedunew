@@ -1,0 +1,51 @@
+﻿<template name="register">
+<div class='school_login_page'>
+  <div class='school_login_pagebg'>
+    <div style='padding:20px;color:#FFF;'>
+      <h1 style='font-wieght:bold'>幼儿园校园管理系统</h1>
+      <br/>
+      <p style='font-size:16px;'>给孩子一个美好的童年<br/>是您的期待<br/>也是我们的责任</p>
+      <p><img src='/images/admin/loginbg2.png' width='100%' ></p>
+    </div>
+  </div>
+  <form>
+    <div class="log_box form-group" style='padding:20px 40px;'>
+      <h3>幼儿园管理系统院长端用户注册</h3>
+      <li><br/></li>
+      <li class='row'>
+        <div class='col-md-6'>
+          <label for="truename">姓名：</label>
+          <input type="text" class="form-control" id="truename" placeholder="输入真实用户姓名">
+        </div>
+      </li>
+      <li><br/></li>
+      <li class='row'>
+        <div class='col-md-6'>
+          <label for="phonenumber">手机号：</label>
+          <input type="text" class="form-control" id="phonenumber" placeholder="输入手机号">
+        </div>
+      </li>
+      <li><br/></li>
+      <li class='row'>
+        <div class='col-md-6'>
+          <label for="authcode">验证码：<a href="#" id="btngetauthcode">点击获取验证码</a></label>
+          <input type="text" class="form-control" id="authcode" placeholder="输入验证码">
+        </div>
+      </li>
+      <li><br/></li>
+      <li class='row'>
+        <div class='col-md-6'>
+          <label for="authcode">密码：</label>
+          <input type="text" class="form-control" id="password" placeholder="输入密码">
+        </div>
+      </li>
+      <li><br/><br/></li>
+      <li class="row">
+        <div class='col-md-6'>
+        <a href="javascript:;" id="btnregister" class='btn btn-primary col-md-3'>确定</a>
+        </div>
+      </li>
+    </div>
+  </form>
+</div>
+</template>

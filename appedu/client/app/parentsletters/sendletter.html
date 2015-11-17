@@ -1,0 +1,37 @@
+<template name="sendletter">
+    <header id="header">
+        <a href="/parentsletters" class="back"><span></span></a>
+        <span class="title">家长信-发送</span>
+        <a class="rightLnk" id="btnsendletter">发送</a>
+    </header>
+    <section id="content">
+        <div class="sendformtb">
+            <div class="sendplace">
+                <span>可见范围: </span>
+                <select class="select" id="specialrecvuser" data-tmp="">
+                    {{#if isparent}}
+                        {{#each sendusers}}
+                            <option value="{{userid}}">{{truename}}</option>
+                        {{/each}}
+                    {{/if}}
+                    {{#if isheaderteacher}}
+                        <option value="0">全部家长</option>
+                        {{#each sendusers}}
+                            <option value="{{userid}}">{{truename}}</option>
+                        {{/each}}
+                    {{/if}}
+                </select>
+            </div>
+            <div class="sendtitle">
+                <input id="title" placeholder="输入标题内容" />
+            </div>
+            <div class="sendtext">
+                <textarea id="textcontent" placeholder="输入正文内容"></textarea>
+            </div>
+            <div class="sendimg">
+                <span class="addimglnk">选择照片</span>
+                <input type='file' multiple="multiple" id="addImgInput"/>
+            </div>
+        </div>
+    </section>
+</template>

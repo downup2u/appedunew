@@ -1,0 +1,23 @@
+<template name="updatefood">
+  <div class='jcd_admin_title'>
+  修改食谱
+</div>
+<div class='row'>
+  <form class="col-xs-4">
+    <div class="form-group">
+        <label for="title">食谱名</label>
+        <input type="text" class="form-control" placeholder="请输入食谱名" value={{foodname}} id="foodname">
+    </div>
+    <div class="form-group">
+        <label for="title">供应日期</label>
+        <input type="text" class="form-control" value={{fooddate}} id="fooddate">
+    </div>
+    <div class="form-group">
+        <label for="title">食谱内容</label>
+        <input type="text" class="form-control" value={{content}} id="content">
+    </div>
+
+    <a href="#" id="btnupdatefood" class="btn btn-primary btn-lg btn-block">修改</a>
+  </form>
+</div>
+</template>

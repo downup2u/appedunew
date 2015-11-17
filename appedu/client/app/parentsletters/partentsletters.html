@@ -1,0 +1,68 @@
+<template name="parentsletters">
+    <header id="header">
+        <a href="/" class="back"><span></span></a>
+        <span class="title">家长信</span>
+        <a href="/sendletter" class="rightLnk">发表</a>
+    </header>
+    <section id="content">
+        <div class="parentsletters">
+            <div class="headnavbox" id="Tab1">
+                <ul class="wbox">
+                    <li id="tabone1" class="lnk hover">收件箱</li>
+                    <li id="tabone2" class="lnk">发件箱</li>
+                </ul>
+            </div>
+            <div class="parentsletterslist">
+                <!--<form action="#" method="get">
+                    <div class="flex_box">
+                        <div>
+                            <input type="search" placeholder="搜索孩子家长" name="keyword" id="keyword_id">
+                            <input type="hidden" name="provinceId" value="1">
+                        </div>
+                        <button class="search_icon box_flex_0"
+                                onclick="javascript:l.searchKeyword();"></button>
+                    </div>
+                </form>-->
+                <div class="parentslettersli" id="con_one_1">
+                    {{#each parentslettersrecv}}
+                        <dl>
+                            <a href="/parentslettersrecvinfo/{{_id}}">
+                                <!--<dt class="avatar"><img src="/images/avatar/{{createuseravatar}}.jpg"></dt>-->
+                                <dt class="avatar"><img src="/images/avatar/2.jpg"></dt>
+                                <dd>
+                                    <p class="tit"><span class="l"><!--{{fromusername}}-->周霞</span><span class="r">5分钟前</span></p>
+                                    <p class="text">
+                                        {{title}}
+                                        <!--{{#if isreaded}}{{else}}<img src="/images/new.gif">{{/if}}-->
+                                    </p>
+                                </dd>
+                            </a>
+                        </dl>
+                    {{/each}}
+                </div>
+                <div class="parentslettersli" id="con_one_2" style="display:none">
+                    {{#if parentsletterssend}}
+                        {{#each parentsletterssend}}
+                            <dl>
+                                <a href="/parentsletterssendinfo/{{_id}}">
+                                    <!--<dt class="avatar"><img src="/images/avatar/{{createuseravatar}}.jpg"></dt>-->
+                                    <dt class="avatar"><img src="/images/avatar/2.jpg"></dt>
+                                    <dd>
+                                        <p class="tit"><span class="l"><!--{{totruename}}-->周霞</span><span class="r">5分钟前</span></p>
+                                        <p class="text">
+                                            {{title}}
+                                            <!--{{#if isreaded}}{{else}}<img src="/images/new.gif">{{/if}}-->
+                                        </p>
+                                    </dd>
+                                </a>
+                            </dl>
+                        {{/each}}
+                    {{else}}
+                        <p align="center">——暂无——</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+</template>

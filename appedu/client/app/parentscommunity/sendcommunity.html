@@ -1,0 +1,26 @@
+<template name="sendcommunity">
+    <header id="header">
+        <a href="/parentscommunity" class="back"><span></span></a>
+        <span class="title">家长圈-发布</span>
+        <a class="rightLnk" href="/parentscommunity">完成</a>
+    </header>
+    <section id="content">
+        <div class="sendformtb">
+            <div class="sendplace">
+                <span>可见范围: </span>
+                <select class="select" id="visiblerange" data-tmp="">
+                    <option value="">-请选择-</option>
+                    <option value="school">本幼儿园可见</option>
+                    <option value="class">本班可见</option>
+                </select>
+            </div>
+            <div class="sendtext">
+                <textarea id="textcontent" placeholder="输入话题内容..."></textarea>
+            </div>
+            <div class="sendimg">
+                <span class="addimglnk">选择照片</span>
+                <input type='file' multiple="multiple" id="addImgInput"/>
+            </div>
+        </div>
+    </section>
+</template>

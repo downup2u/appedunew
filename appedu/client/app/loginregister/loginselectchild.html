@@ -1,0 +1,32 @@
+﻿<template name="loginselectchild">
+	<header id="header">
+        <span class="title">选择自己的孩子</span>
+        <a href="/newchild/loginselectchild" class="rightLnk">添加</a>
+    </header>
+	<section id="content">
+        <div class="loginselectchild">
+            <div>
+                <ul class="jcd_btnselectchild">
+                    {{#each mychildlist}}
+                        {{#if iscurchild}}
+                            <li class='selchild_{{childid}} sel'><span>{{childname}}</span><span>{{classtermname}}</span><span>{{schoolname}}</span> </li>
+                        {{else}}
+                            <li class='selchild_{{childid}}'><span>{{childname}}</span><span>{{classtermname}}</span><span>{{schoolname}}</span> </li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+
+            <div class="feed_back chickbox-aggree">
+                <div class="fb_m" style="margin-left:15px;">
+                    <label for="">
+                        <input name="isnextskip" type="checkbox" value="" class="c_checkbox_1" style="border-radius:5px">
+                        <span style="line-height:24px;">下次跳过该页面</span>
+                    </label>
+                </div>
+            </div>
+            <div><br/></div>
+            <a href="#"  class="yyBtn" id="btnenter">进入</a>
+        </div>
+	</section>
+</template>

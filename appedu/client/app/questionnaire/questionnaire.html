@@ -1,0 +1,31 @@
+<template name="questionnaire">
+    <header id="header">
+        <a href="/" class="back"><span></span></a>
+        <span class="title">问卷调查</span>
+        {{#if isheaderteacher}}
+        <a href="/questionnairexz" class="rightLnk">新增</a>
+        {{/if}}
+    </header>
+    <section id="content">
+        <div class="questionnaire">
+            {{#if isheaderteacher}}
+                <a href="/questionnairexz" class="yyBtn">发起问卷调查</a>
+            {{/if}}
+            {{#if questionnairelist}}
+            <div class="questionnairelist">
+                <ul>
+                    <li class="tt"><span class="l t">问卷名</span><span class="l n">回答数</span></li>
+                    {{#each questionnairelist }}
+                    <li>
+                        <a href="/questionnairexq/{{_id}}">
+                            <span class="l t">{{qnairetitle}}</span><span class="l n">3/10</span>
+                            <span class="pointbox_right"></span>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+    </section>
+</template>

@@ -1,0 +1,35 @@
+<template name="editstudent">
+    <header id="header">
+        <a href="/studentslist" class="back"><span></span></a>
+        <span class="title">编辑花名册</span>
+        <a class="rightLnk">完成</a>
+    </header>
+    <section id="content">
+        <div class="editstudentpage">
+            <div class="jcd_form">
+                <div class="i name s">
+                    <input type="text" placeholder="请输入孩子姓名" />
+                </div>
+                <div class="jcd_form_chickbox sex i">
+                    <label class='jcd_form_chickbox_lnk sel'><input type="radio" name="role" value="boy" checked="checked"/>男</label>
+                    <label class="jcd_form_chickbox_lnk"><input type="radio" name="role" value="girl"/>女</label>
+                </div>
+                <div class="i s date">
+                    <input type="date" placeholder="选择出生日期" id="birthday" />
+                </div>
+                <div class="i s parentslist">
+                    <span>父亲: 13888888888</span>
+                    <a href="#" class="delparents">删除</a>
+                </div>
+                <div class="i s parents">
+                    <select>
+                        <option value="1">父亲</option>
+                        <option value="1">母亲</option>
+                    </select>
+                    <input type="number" placeholder="联系方式" id="phone" />
+                    <a href="#" class="addparents">添加</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

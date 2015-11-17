@@ -1,0 +1,183 @@
+<template name="classxz">
+
+<header id="header">
+	<a href="/" class="back"><img src="images/mark1.png"></a><span class="category_h_title">创建班级</span><span class="category_h_nav" style="cursor:pointer;"><img src="images/sx.png"></span>
+   </header>
+<section class="login_con">
+    <section class="user_login">
+        <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+            <section class="lcon user_input telephone_area">
+            <div class="form_mod form_select">
+                  <div>
+                  <label for="">省份</label>
+                    <select class="select" id="home_address-sprovince" data-tmp="">
+                      <option value="0">请选择</option>
+                      <option value="100000">北京</option>
+                      <option value="100073">上海</option>
+                      <option value="100168">天津</option>
+                      <option value="100216">重庆</option>
+                      <option value="101254">河北省</option>
+                      <option value="101439">山西省</option>
+                      <option value="101570">河南省</option>
+                      <option value="101770">辽宁省</option>
+                      <option value="101890">吉林省</option>
+                      <option value="101964">黑龙江省</option>
+                      <option value="102110">内蒙古自治区</option>
+                      <option value="102225">江苏省</option>
+                      <option value="102351">山东省</option>
+                      <option value="102515">安徽省</option>
+                      <option value="102647">浙江省</option>
+                      <option value="102752">福建省</option>
+                      <option value="102848">湖北省</option>
+                      <option value="103056">湖南省</option>
+                      <option value="103198">广东省</option>
+                      <option value="103407">广西壮族自治区</option>
+                      <option value="103532">江西省</option>
+                      <option value="103650">四川省</option>
+                      <option value="103857">海南省</option>
+                      <option value="104153">贵州省</option>
+                      <option value="104252">云南省</option>
+                      <option value="104398">西藏自治区</option>
+                      <option value="104479">陕西省</option>
+                      <option value="104598">甘肃省</option>
+                      <option value="104703">青海省</option>
+                      <option value="104758">宁夏回族自治区</option>
+                      <option value="104786">新疆维吾尔自治区</option>
+                      <option value="104915">海外</option>
+                      <option value="104934">香港特别行政区</option>
+                      <option value="104956">澳门特别行政区</option>
+                      <option value="104959">台湾</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form_mod form_select">
+                  <div>
+                    <label for="">城市</label>
+                    <select class="select" id="home_address-scity" data-tmp="">
+                      <option value="0">请选择</option>
+                      <option value="100000">北京</option>
+                      <option value="100073">上海</option>
+                      <option value="100168">天津</option>
+                      <option value="100216">重庆</option>
+                      <option value="101254">河北省</option>
+                      <option value="101439">山西省</option>
+                      <option value="101570">河南省</option>
+                      <option value="101770">辽宁省</option>
+                      <option value="101890">吉林省</option>
+                      <option value="101964">黑龙江省</option>
+                      <option value="102110">内蒙古自治区</option>
+                      <option value="102225">江苏省</option>
+                      <option value="102351">山东省</option>
+                      <option value="102515">安徽省</option>
+                      <option value="102647">浙江省</option>
+                      <option value="102752">福建省</option>
+                      <option value="102848">湖北省</option>
+                      <option value="103056">湖南省</option>
+                      <option value="103198">广东省</option>
+                      <option value="103407">广西壮族自治区</option>
+                      <option value="103532">江西省</option>
+                      <option value="103650">四川省</option>
+                      <option value="103857">海南省</option>
+                      <option value="104153">贵州省</option>
+                      <option value="104252">云南省</option>
+                      <option value="104398">西藏自治区</option>
+                      <option value="104479">陕西省</option>
+                      <option value="104598">甘肃省</option>
+                      <option value="104703">青海省</option>
+                      <option value="104758">宁夏回族自治区</option>
+                      <option value="104786">新疆维吾尔自治区</option>
+                      <option value="104915">海外</option>
+                      <option value="104934">香港特别行政区</option>
+                      <option value="104956">澳门特别行政区</option>
+                      <option value="104959">台湾</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form_mod form_select">
+                  <div>
+                  <label for="">地区</label>
+                    <select class="select" id="home_address-sarea" data-tmp="">
+                      <option value="0">请选择</option>
+                      <option value="100000">北京</option>
+                      <option value="100073">上海</option>
+                      <option value="100168">天津</option>
+                      <option value="100216">重庆</option>
+                      <option value="101254">河北省</option>
+                      <option value="101439">山西省</option>
+                      <option value="101570">河南省</option>
+                      <option value="101770">辽宁省</option>
+                      <option value="101890">吉林省</option>
+                      <option value="101964">黑龙江省</option>
+                      <option value="102110">内蒙古自治区</option>
+                      <option value="102225">江苏省</option>
+                      <option value="102351">山东省</option>
+                      <option value="102515">安徽省</option>
+                      <option value="102647">浙江省</option>
+                      <option value="102752">福建省</option>
+                      <option value="102848">湖北省</option>
+                      <option value="103056">湖南省</option>
+                      <option value="103198">广东省</option>
+                      <option value="103407">广西壮族自治区</option>
+                      <option value="103532">江西省</option>
+                      <option value="103650">四川省</option>
+                      <option value="103857">海南省</option>
+                      <option value="104153">贵州省</option>
+                      <option value="104252">云南省</option>
+                      <option value="104398">西藏自治区</option>
+                      <option value="104479">陕西省</option>
+                      <option value="104598">甘肃省</option>
+                      <option value="104703">青海省</option>
+                      <option value="104758">宁夏回族自治区</option>
+                      <option value="104786">新疆维吾尔自治区</option>
+                      <option value="104915">海外</option>
+                      <option value="104934">香港特别行政区</option>
+                      <option value="104956">澳门特别行政区</option>
+                      <option value="104959">台湾</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form_mod form_select">
+                  <div>
+                  <label for="">幼儿园</label>
+                    <select class="select" id="home_address-sarea" data-tmp="">
+                      <option value="0">请选择</option>
+                      <option value="100000">红山幼儿园</option>
+                    </select>
+                  </div>
+                </div>
+                <section class="lcon pass_input">
+                    <input class="admin" name="password" value="" maxlength="20" placeholder="输入班级名称：">
+                </section>
+                <section class="lcon login_btn">
+                    <input type="submit" value="创建／加入班级">
+                </section>
+            </section>
+
+
+         </form>
+    </section>
+
+
+</section>
+
+<nav id="nav" class="navbg">
+  <ul>
+    <li class="on"> <a href="/">
+      <div class="home_nav"></div>
+      <p>首页</p>
+      </a> </li>
+    <li class=""> <a href="qa">
+      <div class="classify_nav"></div>
+      <p>问答</p>
+      </a> </li>
+    <li class=""> <a href="evaluation">
+      <div class="nav3sty  cart_nav"></div>
+      <p>测评</p>
+      </a> </li>
+    <li class=""> <a href="profile">
+      <div class="user_nav"></div>
+      <p>我的</p>
+      </a> </li>
+  </ul>
+</nav>
+</template>

@@ -1,0 +1,31 @@
+<template name="classterms">
+  <div class='jcd_admin_title'>
+  班级列表
+  	<a href="/addclassterm" class='btn btn-primary jcd_admin_addbtn'><span class='glyphicon glyphicon-plus'></span> 新增班级</a>
+</div>
+<div class="panel panel-default">
+  <!-- Table -->
+  <table class='table jdc_admin_table'>
+    <tr>
+      <th>班级名</th>
+      <th>开学日期</th>
+      <th>结束日期</th>
+      <th>班主任名字</th>
+      <th>学校名</th>
+      <th>操作</th>
+    </tr>
+    {{#each classtermlist}}
+    <tr>
+      <td><a href="/classterminfo/{{_id}}">{{name}}</a></td>
+      <td>{{termbegin}}</td>
+      <td>{{termend}}</td>
+      <td>{{headerteachername}}</td>
+      <td>{{schoolname}}</td>
+      <td class='jdc_admin_table_right'>
+        <a href="/updateclassterm/{{_id}}" class="btn btn-primary"><span class='glyphicon glyphicon-pencil'></span> 修改</a>
+      </td>
+    </tr>
+    {{/each}}
+  </table>
+</div>
+</template>

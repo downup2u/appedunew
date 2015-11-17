@@ -1,0 +1,81 @@
+<template name="questionnairexq">
+    <header id="header">
+        <a href="/questionnaire" class="back"><span></span></a>
+        <span class="title">问卷调查</span>
+    </header>
+
+    <section id="content" class="qnfeedbackxz">
+        <div class="title">{{questionnairexq.qnairetitle}}</div>
+        {{#each questionnairexq.questionlist}}
+            <div class="qnfeedbackxz_list">
+                <div class="title2"><span>{{questioncontent}}</span></div>
+                <ul>
+                    {{#each answerlist}}
+                        <li>
+                            <span class="l">{{answercontent}}</span>
+                            <span class="r">{{checkcount}}人</span>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </section>
+</template>
+
+
+<template name="qnfeedbackxz">
+    <header id="header">
+        <a href="/questionnaire" class="back"><span></span></a>
+        <span class="title">问卷调查</span>
+    </header>
+    <section id="content">
+        <div class="qnfeedbackxz">
+            <div class="title">{{questionnairexq.qnairetitle}}</div>
+            <section class="jcd_form">
+                {{#each questionnairexq.questionlist}}
+                <section class="jcd_form_chickbox jcd_form_block" id="{{questionid}}">
+                    <div class="questioncontent"><span>{{questioncontent}}</span></div>
+                    {{#each answerlist}}
+                    <label class='jcd_form_chickbox_lnk'><input class="c_checkbox_1" type="radio" name="{{questionid}}" value="{{index}}"/>{{answercontent}}</label>
+                    {{/each}}
+                </section>
+                {{/each}}
+            </section>
+            <!--{{#each questionnairexq.questionlist}}
+                <div id="{{questionid}}" class="uncheck">
+                    <div><span>{{questioncontent}}</span></div>
+                    <div>
+                        {{#each answerlist}}
+                            <div><input class="c_checkbox_1" type="radio" name="{{questionid}}" value="{{index}}"/>{{answercontent}}</div>
+                        {{/each}}
+                    </div>
+                </div>
+            {{/each}}-->
+        </div>
+    </section>
+</template>
+
+<template name="qnfeedbackxq">
+    <header id="header">
+        <a href="javascript:history.go(-1);" class="back"><img src="/images/mark1.png"></a>
+        <span class="category_h_title">问卷调查</span>
+    </header>
+
+    <section class="content pad padb pad10">
+        <div style="display:block;text-align:center;">{{questionnairexq.qnairetitle}}</div>
+        {{#each questionnairexq.questionlist}}
+            <div class="qnfeedbackxz">
+                <div class="title"><span>{{questioncontent}}</span></div>
+                <ul>
+                    {{#each answerlist}}
+                        {{#if checked}}
+                            <li style="background-color: #009900;">{{answercontent}}</li>
+                        {{else}}
+                            <li>{{answercontent}}</li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}
+    </section>
+</template>

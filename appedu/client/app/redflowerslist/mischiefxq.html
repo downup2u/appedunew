@@ -1,0 +1,20 @@
+<template name="mischiefxq">
+
+    <header id="header">
+	    <a href="javascript:history.go(-1);" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">捣蛋榜详情</span><span class="category_h_nav back1"><a href="/mischiefxz/{{flowerlistid}}">新增</a></span>
+    </header>
+    <section class="content pad padb pad10">
+        <div class="ddb_1"><img src="/images/user.jpg"><span>{{childname}}<em>({{flowerscount}})</em></span></div>
+        <div class="ddb">
+            <ul>
+                {{#each blackflowerslist }}
+                    <li>
+                        <span class="fl time"><i></i>{{happentime}}</span><span class="fr laoshi"><i></i>{{teachername}}</span>
+                        <div class="neirong"><i></i><span>{{content}}</span></div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </section>
+
+</template>

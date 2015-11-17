@@ -1,0 +1,32 @@
+<template name="addteachplan">
+  <div class='jcd_admin_title'>
+  新建教学计划
+</div>
+<div class='row'>
+  <form class="col-xs-4">
+    <div class="form-group">
+        <label for="title">教学计划</label>
+        <input type="text" class="form-control" placeholder="请输入教学计划" id="teachcontent">
+    </div>
+    <div class="form-group">
+        <label for="title">教学时间</label>
+        <input type="text" class="form-control" id="teachdate">
+    </div>
+    <div class="form-group">
+        <label for="title">老师名</label>
+        <input type="text" class="form-control" id="teachername">
+    </div>
+    <div class="form-group">
+        <label for="title">班级</label>
+        <select id="classtermtype">
+          {{#each classtermlist}}
+          <option value="{{_id}}">{{name}}</option>
+          {{/each}}
+        </select>
+
+    </div>
+
+    <a href="#" id="btnaddteachplan" class="btn btn-primary btn-lg btn-block">新增</a>
+  </form>
+</div>
+</template>

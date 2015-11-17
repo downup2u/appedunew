@@ -1,0 +1,78 @@
+<!--
+	家长新建孩子
+	说明：这是个新建孩子表单
+-->
+<template name="newchild">
+    <header id="header">
+        <a href="/{{returnurl}}" class="back"><span></span></a>
+        <span class="title">新增孩子</span>
+    </header>
+    <section id="content">
+        <section class="newchild">
+            <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+                <div class="s">
+                    <span>家长角色</span>
+                    <select id="releationshipname" class="select" data-tmp="">
+                        <option value="0">请选择</option>{{#each releationshiplist}}
+                        <option>{{name}}</option>{{/each}}
+                    </select>
+                </div>
+                <div class="i">
+                    <input class="admin" id="truename" value="" maxlength="20" placeholder="请输入孩子的姓名">
+                </div>
+                <div class="i">
+                    <input class="admin" id="birthday" value="" maxlength="20" placeholder="请选择出生日期">
+                </div>
+                <div class="ch jcd_form">
+                    <section class="jcd_form_chickbox">
+                        <label for="male" class="jcd_form_chickbox_lnk sel">
+                            <input type="radio" name="gender" id="male" value="Male"/>男
+                        </label>
+                        <label for="female" class="jcd_form_chickbox_lnk">
+                            <input type="radio" name="gender" id="female" value="Female"/>女
+                        </label>
+                    </section>
+                </div>
+                <br/><br/>
+                <a href="#" id="btnaddchild" class="yyBtn" >确定</a>
+            </form>
+        </section>
+    </section>
+<!--
+        <section class="newchild">
+            <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+                <section class="telephone_area">
+                    <div class="form_mod form_select">
+                        <div>
+                            <label for="" style='width:78px;'>家长角色</label>
+                            <select id="releationshipname" class="select" data-tmp="">
+                                <option value="0">请选择</option>{{#each releationshiplist}}
+                                <option>{{name}}</option>{{/each}}
+                            </select>
+                        </div>
+                    </div>
+                    <section class="lcon pass_input">
+                        <input class="admin" id="truename" value="" maxlength="20" placeholder="孩子的姓名：">
+                    </section>
+                    <section class="lcon pass_input">
+                        <input class="admin" id="birthday" value="" maxlength="20" placeholder="出生日期：">
+                    </section>
+                    <br/>
+                    <label>性别</label>
+
+                    <div class="jcd_form">
+                        <section class="jcd_form_chickbox" style="margin-bottom:20px;">
+                            <label for="male" class="jcd_form_chickbox_lnk sel">
+                                <input type="radio" name="gender" id="male" value="Male"/>男
+                            </label>
+                            <label for="female" class="jcd_form_chickbox_lnk">
+                                <input type="radio" name="gender" id="female" value="Female"/>女
+                            </label>
+                        </section>
+                    </div>
+                </section>
+                <div class="gift_btn"><a href="#" id="btnaddchild" title="会员登录" style="color:#FFF">确定</a></div>
+            </form>
+        </section>
+    </section>-->
+</template>

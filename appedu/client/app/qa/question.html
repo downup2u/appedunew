@@ -1,0 +1,21 @@
+<template name="question">
+    <div style="background-color:#f1f1f1">
+        <header id="header">
+	        <a href="javascript:history.go(-1);" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">提问</span><span class="category_h_nav  back1">完成</span>
+        </header>
+        <section class="pad padb pad10">
+            <div class="feed_back">
+                <img class="fd_prompt" src="/images/tx.jpg" alt="">
+                <input id="qtitle" name="qtitle" type="text" class="input_200" placeholder="问题概述"/>
+                <div class="fb_con">
+                    <textarea id="qcontent" name="qcontent" placeholder="请详细描述您的问题" class="J_idea"></textarea>
+                    <div class="fb_m">
+                        <input id="isvisibleforothers" name="isvisibleforothers" type="checkbox"  class="c_checkbox_1"/><label for="isvisibleforothers">是否对其他人可见</label>
+                        <input id="isallowotherscommit" name="isallowotherscommit" type="checkbox"  class="c_checkbox_1"/><label for="isallowotherscommit">是否允许其他人评论</label>
+                    </div>
+                </div>
+                <section class="gift_btn"> <a href="#">提交</a> </section>
+            </div>
+        </section>
+    </div>
+</template>

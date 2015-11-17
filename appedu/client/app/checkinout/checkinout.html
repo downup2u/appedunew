@@ -1,0 +1,72 @@
+<template name="checkinout">
+<header id="header">
+	<a href="/" class="back"><img src="images/mark1.png"></a><span class="category_h_title">入校离校</span>
+   </header>
+<section class="content pad padb pad10">
+<div class="jzx_1" id="Tab1"><ul class="wbox"><li id="tabone1"  class="hover">入校<em>(30/40)</em></li><li id="tabone2"  class="">离校<em>(30/40)</em></li></ul></div>
+<div class="padleft mt15">
+<div class="sxtj"><div>
+                    <select class="select" id="home_address-scity" data-tmp="">
+                      <option value="0">4年级3班</option>
+                      <option value="100000">4年级1班</option>
+                      <option value="100073">5年级2班</option>
+                    </select>
+                  </div></div>
+<div class="search">
+        <form id="search_form" dd_name="搜索部分" method="get" action="" target="_parent" onsubmit="return submit_search();">
+            <div class="text_box" name="list_search_text_box" dd_name="搜索框" onclick="return 1;">
+                <input id="_keyword" name="key" type="text" placeholder="输入姓名" class="text" value="">
+            </div>
+            <span class="mix_submit"></span> <a href="javascript:void(0)" class="clear_input" id="clear_input"></a>
+            <input type="hidden" value="eccec8b9091fa03b" name="sid">
+            <input type="submit" value="" class="submit" id="list_search_submit" dd_name="提交">
+        </form>
+    </div>
+</div>
+<div class="rxlx hover" id="con_one_1">
+<ul><li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张宏宇</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+</ul>
+</div>
+<div class="rxlx" id="con_one_2" style="display:none">
+<ul><li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+<li><img src="images/user.jpg"><span>张晓丽</span><em><input name="" type="radio" value="" class="c_checkbox1"></em></li>
+</ul>
+</div>
+</section>
+
+<nav id="nav" class="navbg">
+  <ul>
+    <li class="on"> <a href="/">
+      <div class="home_nav"></div>
+      <p>首页</p>
+      </a> </li>
+    <li class=""> <a href="qa">
+      <div class="classify_nav"></div>
+      <p>问答</p>
+      </a> </li>
+    <li class=""> <a href="evaluation">
+      <div class="nav3sty  cart_nav"></div>
+      <p>测评</p>
+      </a> </li>
+    <li class=""> <a href="profile">
+      <div class="user_nav"></div>
+      <p>我的</p>
+      </a> </li>
+  </ul>
+</nav>
+</template>

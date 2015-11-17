@@ -1,0 +1,42 @@
+﻿<template name="qaxq">
+    <header id="header">
+	    <a href="/" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">详情</span><span class="category_h_nav  back1">回复</span>
+    </header>
+    <section class="content pad padb mt15 pad10" style="padding-top:35px;">
+        <div class="jzq">
+            <dl>
+                <dt><img src="/images/jzq.jpg"></dt>
+                <dd>
+                    <h2>{{qaxq.createusername}}</h2>
+                    <span> {{qaxq.qcontent}} </span>
+                </dd>
+            </dl>
+            <div class="jzq_fl">20分钟前<div class="jzq_fr"><span>{{qaxq.replylist.length}}回答</span></div></div>
+        </div>
+        <div class="qaxq_answer">
+            <dl>
+                {{#each qaxq.replylist}}
+                    <dd><span>{{replyusername}}</span>：{{replycontent}}</dd>
+                {{/each}}
+            </dl>
+        </div>
+		<div class="jcd_reply_bottom">
+			<div class="jcd_reply_con">
+				<textarea id="qreply" placeholder="请输入您的回答" class="jcd_textarea" style='overflow-y: hidden;' onpropertychange="this.style.height = this.scrollHeight + 'px';" oninput="this.style.height = this.scrollHeight + 'px';"></textarea>
+				<a href="javascript:;" class="jcd_submit_reply">确认</a>
+			</div>
+		</div>
+		
+		<!--
+        <section id="add_reply" class="gift_btn"> <a href="#">回复</a> </section>
+        <div id="reply_zone" class="feed_back" style="display: none;">
+            <div class="fb_con">
+                <textarea id="qreply" placeholder="请输入您的回答" class="J_idea"></textarea>
+            </div>
+            <section id="submit_reply" class="gift_btn"> <a href="#">确认</a> </section>
+            <section id="cancle_reply" class="gift_btn"> <a href="#">取消</a> </section>
+        </div>
+		-->
+		
+    </section>
+</template>

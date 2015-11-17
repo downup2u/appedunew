@@ -1,0 +1,45 @@
+﻿<template name="basicinfo">
+<header id="header">
+	<a href="/profile" class="back"><span></span></a>
+    <span class="title">基本信息</span>
+</header>
+<section id="content">
+<section class="basicinfo">
+    <form action="#" id="edit" name="edit" method="post">
+			<div class="pwd myinfo my_information jcd_my_information">
+				<div class="li">
+					<span class="t">姓名:</span>
+					<span class="i"><input type="text" id="truename" value="{{truename}}" class="pwd_t" style="margin:0"></span>
+				</div>
+                <section class="avatarPage">
+                    <section class="formcon">
+                        <p><img src="/images/avatar/{{avatar}}.jpg" width="80" height="80" id="nowAvatar" class="changeLnk" style="padding: 0" /></p>
+                        <p><a class="changeLnk">修改头像</a></p>
+                    </section>
+                    <input type="hidden" value="{{avatar}}" name="avatarid" id="avatarid">
+                    <div class="sel_avatar">
+                        <p class="sel_t">选择头像:</p>
+                        <ul>
+                            {{#each avararlist}}
+                                <li class="sel_t_{{id}}" data="{{id}}">
+                                    <div class="imgconn">
+                                        <img src="{{url}}" />{{#if now}}<span class='n'>当前</span>{{/if}}
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    <section class="gift_btn">
+                        <a id="btnmodify" class="yyBtn" style="color:#FFF">保存</a>
+                    </section>
+                </section>
+				<section class="gift_btn">
+					<a href="#" id="btnmodify" style="color:#FFF">保存</a>
+				</section>
+			</div>
+
+    </form>
+		
+    </section>
+</section>
+</template>

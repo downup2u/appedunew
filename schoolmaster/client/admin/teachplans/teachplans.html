@@ -1,0 +1,31 @@
+<template name="teachplans">
+  <div class='jcd_admin_title'>
+     教学计划
+     	<a href="/addteachplan" class='btn btn-primary jcd_admin_addbtn'><span class='glyphicon glyphicon-plus'></span> 新增教学计划</a>
+   </div>
+   <div class="panel panel-default">
+     <!-- Table -->
+     <table class='table jdc_admin_table'>
+       <tr>
+         <th>教学计划</th>
+         <th>教学时间</th>
+         <th>老师名</th>
+         <th>班级</th>
+         <th>新建者</th>
+         <th>操作</th>
+       </tr>
+       {{#each teachplanlist}}
+       <tr>
+         <td>{{teachcontent}}</td>
+         <td>{{teachdate}}</td>
+         <td>{{teachername}}</td>
+         <td>{{classtermname}}</td>
+         <td>{{createusername}}</td>
+         <td class='jdc_admin_table_right'>
+           <a href="/updateteachplan/{{_id}}" class="btn btn-primary"><span class='glyphicon glyphicon-pencil'></span> 修改</a>
+         </td>
+       </tr>
+       {{/each}}
+     </table>
+   </div>
+</template>

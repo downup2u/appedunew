@@ -1,0 +1,40 @@
+<template name="activities">
+    <header id="header">
+        <a href="/{{returnurl}}" class="back"><span></span></a>
+        <span class="title">活动管理</span>
+        {{#if isheaderteacher}}
+            <a href="/newactivity" class="rightLnk">发表</a>
+        {{/if}}
+    </header>
+    <section id="content">
+        <div class="activitiespage">
+            <div class="headnavbox" id="Tab1">
+                <ul class="wbox">
+                    <li class="" id="tabone1">上月</li>
+                    <li class="hover" id="tabone2">本月</li>
+                    <li class="" id="tabone3">下月</li>
+                </ul>
+            </div>
+
+            <div class="jxjh_1">
+                {{#each activitylist}}
+                    <a href="/activityinfo/{{_id}}">
+                        <dl>
+                            {{#if visiblerangeisclass}}
+                                <dt>班级</dt>
+                            {{else}}
+                                <dt>幼儿园</dt>
+                            {{/if}}
+                            <dd>
+                                <span>{{content}}</span>
+                                <span class="t"><em>时间：{{activitydate}}</em></span>
+                                <span class="c">{{title}}</span>
+                            </dd>
+                        </dl>
+                    </a>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+</template>

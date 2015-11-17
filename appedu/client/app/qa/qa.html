@@ -1,0 +1,36 @@
+﻿<template name="qa">
+
+    <header id="header">
+	    <a href="/" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">问答</span><span class="category_h_nav  back1"><a href="sendletter">发表</a></span>
+    </header>
+    <section class="content pad padb pad10">
+        <div class="jzx_1" id="Tab1"><ul class="wbox"><li id="tabone1" class="hover">话题</li><li id="tabone2" class="">等你答</li></ul></div>
+        <div class="jzq hover" id="con_one_1">
+            {{#each qalist.alllist }}
+                <dl>
+					<a href="/qaxq/{{_id}}">
+                    <dt><img src="/images/jzq.jpg"/></dt>
+                    <dd>
+                        <h2>{{createusername}}</h2>
+							<span>{{qtitle}}</span>
+                        <div class="jzq_fl">20分钟前<div class="jzq_fr"><span>{{replycount}}回答</span></div></div>
+                    </dd>
+					</a>
+                </dl>
+            {{/each}}
+        </div>
+        <div class="jzq" id="con_one_2" style="display:none">
+            {{#each qalist.undolist }}
+                <dl>
+                    <dt><img src="/images/jzq.jpg"/></dt>
+                    <dd>
+                        <h2>{{createusername}}</h2>
+                        <span> <a href="/qaxq/{{_id}}">{{qtitle}}</a> </span>
+                        <div class="jzq_fl">20分钟前<div class="jzq_fr"><span>{{replycount}}回答</span></div></div>
+                    </dd>
+                </dl>
+            {{/each}}
+        </div>
+    </section>
+    <a href="/question"><div class="tw"><img src="/images/tw.png"><span>提问</span></div></a>
+</template>

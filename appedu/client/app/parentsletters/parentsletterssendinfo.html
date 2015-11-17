@@ -1,0 +1,34 @@
+<template name="parentsletterssendinfo">
+
+    <header id="header">
+        <a href="/parentsletters" class="back"><span></span></a>
+        <span class="title">家长信详情</span>
+    </header>
+    <section id="content">
+        <div class="parentslettersrecvinfo">
+            <div class="parentslettersrecvinfotext">
+                <dl>
+                    <a  style="padding-right:70px;padding-left:0">
+                        <!--<dt class="avatar"><img src="/images/avatar/{{createuseravatar}}.jpg"></dt>-->
+                        <dt class="avatar" style="right:0;left: auto"><img src="/images/avatar/2.jpg"></dt>
+                        <dd>
+                            <!--<h2>{{fromusername}}</h2>-->
+                            <p class="tit"><span class="r">接受者: <!--{{totruename}}-->周霞</span><span class="l">5分钟前</span></p>
+                        </dd>
+                    </a>
+                </dl>
+                <div class="parentslettersrecvinfoarticle">
+                    <p class="tit">{{title}}</p>
+                    <p class="con">{{content}}</p>
+                    <p class="img">
+                    <ul>
+                        {{#each images}}
+                            <li><img src="/cfs/files/images/{{imageid}}"></li>
+                        {{/each}}
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

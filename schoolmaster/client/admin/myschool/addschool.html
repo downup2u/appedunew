@@ -1,0 +1,37 @@
+<template name="addschool">
+  <div class='jcd_admin_title'>
+  新建幼儿园
+</div>
+<div class='row'>
+  <form class="col-xs-4">
+    <div class="form_mod form_select">
+      <div>
+      <label for="">省份</label>
+        <select class="J_province borderbox" id='J_province'>
+          <option value='0'>-请选择-</option>
+            {{#each newProvince}}
+            <option value='{{name}}'>{{name}}</option>
+            {{/each}}
+        </select>
+      </div>
+    </div>
+    <div class="form_mod form_select">
+      <div>
+        <label for="">城市</label>
+        <select class="J_city borderbox" id='J_city'>
+          <option value='0'>-请选择-</option>
+        </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title">幼儿园名</label>
+        <input type="text" class="form-control" placeholder="请输入幼儿园名称" id="name">
+    </div>
+    <div class="form-group">
+        <label for="starttime">地址</label>
+        <input type="text" class="form-control"  placeholder="请输入幼儿园地址" id="address">
+    </div>
+    <a href="#" id="btnaddschool" class="btn btn-primary btn-lg btn-block">新增</a>
+  </form>
+</div>
+</template>

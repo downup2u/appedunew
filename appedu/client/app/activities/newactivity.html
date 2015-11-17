@@ -1,0 +1,30 @@
+<template name="newactivity">
+
+    <header id="header">
+        <a href="/{{returnurl}}" class="back"><span></span></a>
+        <span class="title">发表活动</span>
+    </header>
+    <section id="content">
+        <div class="newactivitypage" style="padding: 20px;">
+            <div class="form-group divli">
+                <input type="date" class="form-control" id="activitydate" placeholder="请选择活动日期">
+            </div>
+            <div class="form-group divli">
+                <input name="" type="text" class="input_200" placeholder="活动标题" id="title">
+            </div>
+            <div class="form-group divli">
+                <textarea placeholder="活动内容..." class="J_idea" id="newactivitycontent"></textarea>
+            </div>
+            <div class="fb_con divli">
+                <div class="fb_m">
+                    <select id="visiblerange">
+                        <option value="class">全班</option>
+                        <option value="school">全校</option>
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <a href="#" id="btnaddactivity" class="yyBtn">发送</a>
+        </div>
+    </section>
+</template>

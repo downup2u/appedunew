@@ -1,0 +1,33 @@
+<!--家长查看我的孩子出来的页面
+说明：这是个孩子列表页面
+每个孩子后面跟编辑，成长记录按钮
+
+加入的学校和班级
+
+-->
+
+<template name="childlist">
+	<header id="header"> <a href="/profile" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">孩子列表</span><span class="category_h_nav back1"><a href="/newchild/childlist">新增</a></span> </header>
+	<section class="content pad padb pad10">
+		<ul class="address_manage">
+			{{#each childlist}}
+			<li class="address_mod ">
+				{{#if iscurchild}}
+				<a href="#" id="btnswitch" class="btnswitch btnswitch_sel">当前孩子</a>
+				{{else}}
+				<a href="#" id="btnswitch" class="btnswitch">切换到当前</a>
+				{{/if}}
+				<div class="bd">
+					<div> <span class="name"><em>{{childname}}</em></span>
+						<p><span style="color:#999">关系：</span><span style="color:#111">{{releationshipname}}</span></p>
+						<p><span style="color:#999">班级：</span><span style="color:#111">{{classtermname}}</span></p>
+						<p><span style="color:#999">幼儿园：</span><span style="color:#111">{{schoolname}}</span></p>
+						<p class="edit"> <a href="/editchild/{{childid}}/childlist"><span class="glyphicon glyphicon-pencil"></span> 编辑</a> {{#if isinschool}}
+							{{#if isinclassterm}} <a href="#" id="btnexitclass"><span class="glyphicon glyphicon-minus"></span> 退出班级</a> {{else}} <a href='/newchildsetclassterm/{{childid}}/{{schoolid}}/childlist'><span class="glyphicon glyphicon-plus"></span> 加入班级</a> {{/if}} <a href="#" id="btnexitschool"><span class="glyphicon glyphicon-share-alt"></span> 退出学校</a> {{else}} <a href='/newchildsetschool/{{childid}}/childlist'><span class="glyphicon glyphicon-home"></span> 加入学校</a> {{/if}} <a href="#" id="btndeletechild"><span class="glyphicon glyphicon-remove"></span> 删除</a> </p>
+					</div>
+				</div>
+			</li>
+			{{/each}}
+		</ul>
+	</section>
+</template>

@@ -1,0 +1,27 @@
+﻿<template name="profile">
+    <header id="header">
+        <a href="#" class="menu"><span></span></a>
+        <span class="title">我的</span>
+    </header>
+    <section id="content">
+        <div class="profile">
+            <div class="baseinfoo">
+                <a href="/basicinfo">
+                    <span class="i"><img src="/images/avatar/{{avatar}}.jpg"></span>
+                    <span class="n">{{username}}</span>
+                    <span class="img"><img src="/images/img20.png" /></span>
+                </a>
+            </div>
+            <div class="lnklist">
+                <ul>
+                    <li class="t"><a href="/parentsletters">我的家长信<span class="pointbox_right"></span></a></li>
+                    <li><a href="/changepassword">修改密码<span class="pointbox_right"></span></a></li>
+                    <li><a href="/myclassterm">我的班级<span class="pointbox_right"></span></a></li>
+                    <br/>
+                    <li><a href="#" id="btnlogout">退出登录<span class="pointbox_right"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {{> leftmenu}}
+</template>

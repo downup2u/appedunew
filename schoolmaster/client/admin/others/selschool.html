@@ -1,0 +1,35 @@
+<template name="selschool">
+<div class='school_login_page'>
+  <div class='school_login_pagebg'>
+    <div style='padding:20px;color:#FFF;'>
+      <h1 style='font-wieght:bold'>幼儿园校园管理系统</h1>
+      <br/>
+      <p style='font-size:16px;'>给孩子一个美好的童年<br/>是您的期待<br/>也是我们的责任</p>
+      <p><img src='/images/admin/loginbg2.png' width='100%' ></p>
+    </div>
+  </div>
+  <form>
+    <div class="log_box form-group" style='padding:20px 40px;'>
+      <h3>选择幼儿园</h3>
+      <li><br/></li>
+      <li class='row'>
+        <div class='col-md-6'>
+          <label for="truename">选择幼儿园</label>
+          <select class="select" id="selschool" data-tmp="">
+              {{#each myschoollist}}
+                <option value="{{schoolid}}">{{schoolname}}</option>
+              {{/each}}
+            </select>
+        </div>
+      </li>
+
+      <li class="row">
+        <div class='col-md-6'>
+          <a href="/addschool/selschool" class='btn btn-primary col-md-3'>新建</a>
+          <a href="#" id="btnenter" class='btn btn-primary col-md-3'>确定</a>
+        </div>
+      </li>
+    </div>
+  </form>
+</div>
+</template>

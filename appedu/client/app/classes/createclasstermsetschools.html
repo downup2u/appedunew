@@ -1,0 +1,38 @@
+<!--家长新建孩子
+说明：这是个新建孩子表单
+-->
+<template name="createclasstermsetschool">
+    <header id="header">
+        <a href="/{{returnurl}}" class="back"><span></span></a>
+        <span class="title">选择学校</span>
+    </header>
+    <section id="content">
+        <section class="createclasstermsetschool">
+            <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+                <div class="s">
+                    <select class="J_province borderbox" id='J_province'>
+                        <option value='0'>-请选择省份-</option>
+                        {{#each newProvince}}
+                            <option value='{{name}}'>{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="s">
+                    <select class="J_city borderbox" id='J_city'>
+                        <option value='0'>-请选择城市-</option>
+                    </select>
+                </div>
+                <div class="s">
+                    <select class="select" id="selschool" data-tmp="">
+                        <option value='0'>-请选择幼儿园-</option>
+                        {{#each schools}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <br/>
+                <a href="#" id="btnnext" class="yyBtn">下一步</a>
+            </form>
+        </section>
+    </section>
+</template>

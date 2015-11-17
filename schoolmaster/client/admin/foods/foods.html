@@ -1,0 +1,31 @@
+<template name="foods">
+  <div class='jcd_admin_title'>
+     食谱管理
+     	<a href="/addfood" class='btn btn-primary jcd_admin_addbtn'><span class='glyphicon glyphicon-plus'></span> 新增食谱</a>
+   </div>
+   <div class="panel panel-default">
+     <!-- Table -->
+     <table class='table jdc_admin_table'>
+       <tr>
+         <th>食谱名</th>
+         <th>供应日期</th>
+         <th>活动内容</th>
+         <th>新建时间</th>
+         <th>新建者</th>
+         <th>操作</th>
+       </tr>
+       {{#each foodlist}}
+       <tr>
+         <td>{{foodname}}</td>
+         <td>{{fooddate}}</td>
+         <td>{{content}}</td>
+         <td>{{createtime}}</td>
+         <td>{{createusername}}</td>
+         <td class='jdc_admin_table_right'>
+           <a href="/updatefood/{{_id}}" class="btn btn-primary"><span class='glyphicon glyphicon-pencil'></span> 修改</a>
+         </td>
+       </tr>
+       {{/each}}
+     </table>
+   </div>
+</template>

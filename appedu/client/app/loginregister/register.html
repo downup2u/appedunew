@@ -1,0 +1,101 @@
+<template name="register">
+    <header id="header">
+        <a href="/login/{{id}}" class="back"><span></span></a>
+        <span class="title">注册</span>
+    </header>
+    <section id="content">
+        <section class="registerpage">
+            <section class="jcd_form">
+                <section class="jcd_form_chickbox jcd_form_center">
+                    <label class='jcd_form_chickbox_lnk sel'><input type="radio" name="role" value="parent" checked="checked"/>家长</label>
+                    <label class="jcd_form_chickbox_lnk"><input type="radio" name="role" value="teacher"/>教师</label>
+                </section>
+                <div class="username">
+                    <span class="icon"></span>
+                    <span class="input">
+                        <input id="truename" type="text" placeholder="请输入真实姓名">
+                    </span>
+                </div>
+                <div class="user">
+                    <span class="icon"></span>
+                    <span class="input">
+                        <input id="phonenumber" type="text" placeholder="请输入您的手机号">
+                    </span>
+                </div>
+                <div class="pw_contain">
+                    <span class="icon"></span>
+                    <span class="input">
+                        <input id='authcode' class="identify_code" type="text" placeholder="手机验证码">
+                    </span>
+                    <div class="huqumima">
+                        <a href="#" id='btngetauthcode'>{{getauthtitle}}</a>
+                    </div>
+                </div>
+                <div class="pw">
+                    <span class="icon"></span>
+                    <span class="input">
+                        <input id="password" type="password" placeholder="密码：6-12位字母或者数字">
+                    </span>
+                </div>
+                <br/>
+                <a href='#' class="yyBtn" id='btnregister'>完成</a>
+            </section>
+        </section>
+    </section>
+    <!--<section>
+        <div class="registerpage">
+            <div class="seltype">
+                <span>老师</span>
+                <span>家长</span>
+            </div>
+            <div class="inputlist">
+                <div class="i"><input type="text" id="truename" value="" class="ricon1" placeholder="姓名："></div>
+                <div class="i"><input type="text" id="phonenumber" value="" class="ricon1" placeholder="姓名："></div>
+                <div class="i">
+                    <input type="text" id="btngetauthcode" value="" class="ricon1" placeholder="姓名：">
+                    <a href="#" id="btngetauthcode"><span>获取验证码</span></a>
+                </div>
+                <div class="i"><input type="text" id="password" value="" class="ricon1" placeholder="请输入密码"></div>
+                <a href="#" class="yyBtn" id="btnregister">注册</a>
+            </div>
+        </div>
+
+
+        <section class="user_login jcd_form">
+            <form action="#" method="post" enctype="multipart/form-data" id="theForm">
+                <br/><br/>
+                <section class="lcon user_input telephone_area">
+                    <section class="jcd_form_chickbox jcd_form_center">
+                        &lt;!&ndash;
+                        <span class="jcd_form_chickbox_lnk form_dom sel">家长</span>
+                        <span class="jcd_form_chickbox_lnk form_dom">教师</span>
+                        &ndash;&gt;
+                        <label class='jcd_form_chickbox_lnk sel'><input type="radio" name="role" value="parent"
+                                                                        checked="checked"/>家长</label>
+                        <label class="jcd_form_chickbox_lnk"><input type="radio" name="role" value="teacher"/>教师</label>
+                        &lt;!&ndash;<label class="jcd_form_chickbox_lnk form_dom sel"><input type="checkbox"><span>家长</span></label>&ndash;&gt;
+                    </section>
+                    <section class="jcd_input_con">
+                        <input type="text" id="truename" value="" class="ricon1" placeholder="姓名：">
+                    </section>
+                    <section class="lcon code_input jcd_input_con">
+                        <input id="phonenumber" type="text" class="admin jcd_form_style" placeholder="手机号码：" value="">
+                    </section>
+                    <section class="lcon code_input jcd_input_con">
+                        <input id="authcode" type="text" class="admin jcd_form_style" placeholder="验证码：" value="">
+                        <a href="#" id="btngetauthcode"><span>获取验证码</span></a>
+                    </section>
+                    <section class="lcon pass_input jcd_input_con">
+                        <input type="password" class="admin jcd_form_style" id="password" value="" maxlength="20"
+                               placeholder="输入密码：">
+                    </section>
+                    <section class="lcon login_btn">
+                        <div class="gift_btn"><a href="#" style="color:#FFF" id="btnregister">注册</a></div>
+                    </section>
+                </section>
+            </form>
+        </section>
+
+
+    </section>-->
+</template>

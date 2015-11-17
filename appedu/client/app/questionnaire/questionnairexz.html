@@ -1,0 +1,29 @@
+<template name="questionnairexz">
+    <header id="header">
+        <a href="/questionnaire" class="back"><span></span></a>
+        <span class="title">问卷调查</span>
+        <a id="qnconfirmbtn" class="rightLnk">完成</a>
+    </header>
+
+    <section id="content">
+        <div class="questionnairexz">
+            <div class="qnairetitle">
+                <input type="text" id="qnairetitle" placeholder="问卷调查标题"/>
+            </div>
+            <div class="qnairecontentdiv">
+                <div class="questioncontent">
+                    <input name="questioncontent" type="text" placeholder="问题内容"/>
+                    <a href="#" class="delqnairecontentdiv">删除</a>
+                </div>
+                <div class="fb_m">
+                    <label for="option_a"><span>选项A: </span><input name="option_a" type="text"/></label>
+                    <label for="option_b"><span>选项B: </span><input name="option_b" type="text"/></label>
+                    <label for="option_c"><span>选项C: </span><input name="option_c" type="text"/></label>
+                    <label for="option_d"><span>选项D: </span><input name="option_d" type="text"/></label>
+                </div>
+            </div>
+            <a class="yyBtn gift_btn">+ 添加一题</a>
+        </div>
+    </section>
+
+</template>

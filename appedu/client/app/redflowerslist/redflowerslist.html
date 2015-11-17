@@ -1,0 +1,39 @@
+<template name="redflowerslist">
+    <header id="header">
+        <a href="/" class="back"><span></span></a>
+        <span class="title">红花榜</span>
+    </header>
+    <section id="content">
+        <div class="redflowerslist">
+
+            <ul>
+                <li><span class="l" style="text-indent: 10px;">姓名</span><span class="l">红花数</span></li>
+                {{#each flowerslist }}
+                <li><a href="/redflowerslistxq/{{_id}}"><span class="cn l">{{childname}}</span><span class="l">{{redflowercount}}</span><span class="pointbox_right"></span></a></li>
+                {{/each}}
+            </ul>
+            <!--
+            <section class="comm">
+                <section class="cumm_t">
+                    <section class="time1">
+                        <section class="bg1 bg_bolgTitle_2"></section>
+                        <section class="p"><span>{{childname}}</span></section>
+                    </section>
+                    <a class="a_BlogShare_full" href="redflowerslistxq/{{_id}}">
+                        <section class="c_txt">
+                            <h2>红花数：</h2>
+                        </section>
+                    </a>
+                    {{#if isheaderteacher}}
+                        <section class="c_img">
+                            <a class="test11" style=" display:inline-block;" href="redflowerslistxz/{{_id}}" data="9"><img src="/images/comm_icon2.png"><span>加一个</span></a>
+                        </section>
+                    {{/if}}
+                </section>
+            </section>
+-->
+
+        </div>
+    </section>
+
+</template>

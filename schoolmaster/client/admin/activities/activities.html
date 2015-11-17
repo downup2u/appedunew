@@ -1,0 +1,31 @@
+<template name="activities">
+  <div class='jcd_admin_title'>
+     活动管理
+     	<a href="/addactivity" class='btn btn-primary jcd_admin_addbtn'><span class='glyphicon glyphicon-plus'></span> 新增活动</a>
+   </div>
+   <div class="panel panel-default">
+     <!-- Table -->
+     <table class='table jdc_admin_table'>
+       <tr>
+         <th>活动摘要</th>
+         <th>活动日期</th>
+         <th>内容</th>
+         <th>可见范围</th>
+         <th>新建时间</th>
+         <th>操作</th>
+       </tr>
+       {{#each activitylist}}
+       <tr>
+         <td><a href="/activityinfo/{{_id}}">{{title}}</a></td>
+         <td>{{activitydate}}</td>
+         <td>{{content}}</td>
+         <td>{{visiblerange}}</td>
+         <td>{{createtime}}</td>
+         <td class='jdc_admin_table_right'>
+           <a href="/updateactivity/{{_id}}" class="btn btn-primary"><span class='glyphicon glyphicon-pencil'></span> 修改</a>
+         </td>
+       </tr>
+       {{/each}}
+     </table>
+   </div>
+</template>

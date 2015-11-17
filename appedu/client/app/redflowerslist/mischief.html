@@ -1,0 +1,29 @@
+<template name="mischief">
+
+    <header id="header">
+	    <a href="javascript:history.go(-1);" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">捣蛋榜</span>
+    </header>
+    <section class="content pad padb">
+        {{#each flowerslist }}
+            <section class="comm">
+                <section class="cumm_t">
+                    <section class="time1">
+                        <section class="bg1 bg_bolgTitle_2"></section>
+                        <section class="p"><span>{{childname}}</span></section>
+                    </section>
+                    <a class="a_BlogShare_full" href="mischiefxq/{{_id}}">
+                        <section class="c_txt">
+                            <h2>捣蛋数：{{blackflowercount}}</h2>
+                        </section>
+                    </a>
+                    {{#if isheaderteacher}}
+                        <section class="c_img">
+                            <a class="test11" style=" display:inline-block;" href="mischiefxz/{{_id}}" data="9"><img src="/images/comm_icon2.png"><span>加一个</span></a>
+                        </section>
+                    {{/if}}
+                </section>
+            </section>
+        {{/each}}
+    </section>
+
+</template>

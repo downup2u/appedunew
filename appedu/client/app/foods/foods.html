@@ -1,0 +1,43 @@
+<template name="foods">
+<header id="header">
+	<a href="/" class="back"><img src="/images/mark1.png"></a><span class="category_h_title">食谱</span>
+</header>
+
+<section class="content pad padb">
+<div class="jxjh" id="Tab1"><ul class="wbox">
+	<li class="hover" id="tabone1" >上周</li>
+<li class="" id="tabone2">本周</li>
+<li class="" id="tabone3">下周</li>
+</ul></div>
+<div class="jxjh_1 hover" id="con_one_1">
+
+	{{#each lastfoodlist}}
+<dl class="wbox"><dt><span class="ys{{index}}"></span>
+	<em>{{weekname}}</em></dt><dd>
+		<span>{{foodname}}</span>{{content}}
+</dd></dl>
+{{/each}}
+
+</div>
+
+<div class="jxjh_1" id="con_one_2" style="display:none">
+	{{#each thisfoodlist}}
+<dl class="wbox"><dt><span class="ys{{index}}"></span>
+	<em>{{weekname}}</em></dt><dd>
+		<span>{{foodname}}</span>{{content}}
+</dd></dl>
+{{/each}}
+</div>
+
+<div class="jxjh_1" id="con_one_3" style="display:none">
+	{{#each nextfoodlist}}
+<dl class="wbox"><dt><span class="ys{{index}}"></span>
+	<em>{{weekname}}</em></dt><dd>
+		<span>{{foodname}}</span>{{content}}
+</dd></dl>
+{{/each}}
+
+</div>
+</section>
+
+</template>

@@ -1,0 +1,49 @@
+<template name="parentscommunity">
+    <header id="header">
+        <a href="/" class="back"><span></span></a>
+        <span class="title">家长圈</span>
+        <a href="/sendcommunity" class="rightLnk">发表</a>
+    </header>
+    <section id="content">
+        <div class='group'>
+            {{#each community}}
+                <dl class='parentscommunity_list_{{_id}}'>
+                    <dt class="avatar">
+                        <img src="/images/avatar/1.jpg">
+                        <!--<img src="/images/avatar/{{createuseravatar}}.jpg">-->
+                        <span>{{createusername}}</span>
+                    </dt>
+                    <dd>
+                        <p>{{content}}</p>
+                        <ul>
+                            {{#each images}}
+                                <li><img src="/cfs/files/images/{{imageid}}"/></li>
+                            {{/each}}
+                        </ul>
+                        <div class="group_lnk">
+                            <div class="l">{{createtimeString}}</div>
+                            <div class="r">
+                                <span class="group_zan jzq_zan" data='{{_id}}'>{{love.length}}</span>
+                                <span class="group_ly jzq_ly" data='{{_id}}'>{{reply.length}}</span>
+                            </div>
+                        </div>
+                        {{#if reply}}
+                        <div class="jzq_3">
+                            <ul>
+                                {{#each reply}}
+                                    <li>{{uname}}：{{cont}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                        {{/if}}
+                        <div id='jzq_reply_{{_id}}' class="reply_form">
+                            <textarea name="reply" placeholder="请输入回复内容..."></textarea>
+                            <a href="#" class="replyLnk">回复</a>
+                        </div>
+                    </dd>
+                </dl>
+            {{/each}}
+            <br/><br/><br/><br/>
+        </div>
+    </section>
+</template>

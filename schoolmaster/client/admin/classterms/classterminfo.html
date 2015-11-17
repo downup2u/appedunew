@@ -1,0 +1,32 @@
+<template name="classterminfo">
+  <div class='jcd_admin_title'>
+		班级详情
+	</div>
+	<div class='jcd_redpackage_con'>
+		<div class='redTxt'>
+      <p><span>班级名字：</span>{{name}}</p>
+			<p><span>开学日期：</span>{{termbegin}}</p>
+			<p><span>放假日期：</span>{{termend}}</p>
+			<p><span>班主任：</span>{{headerteachername}}个</p>
+			<p><span>学校名：</span>{{schoolname}}</p>
+			<p><span>新建时间：</span>{{createtime}}</p>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<!-- Table -->
+		<table class='table jdc_admin_table'>
+			<tr>
+				<th>孩子姓名</th>
+				<th>家长</th>
+			</tr>
+			<tr>
+			{{#each studentlist}}
+				<td>{{childname}}</td>
+				<td>{{#each parentlist}}
+          {{username}}
+          {{/each}}</td>
+			{{/each}}
+			</tr>
+		</table>
+	</div>
+</template>
