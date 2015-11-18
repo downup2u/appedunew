@@ -37,7 +37,7 @@
                 <section class="jcd_form_chickbox jcd_form_block uncheck" id="{{questionid}}">
                     <div class="questioncontent"><span>{{questioncontent}}</span></div>
                     {{#each answerlist}}
-                    <label class='jcd_form_chickbox_lnk'><input class="c_checkbox_1" type="radio" name="{{questionid}}" value="{{index}}"/>{{answercontent}}</label>
+                    <label class='jcd_form_chickbox_lnk' data-val="{{index}}"><input class="c_checkbox_1" type="radio" name="{{questionid}}" value="{{index}}"/>{{answercontent}}</label>
                     {{/each}}
                 </section>
                 {{/each}}
@@ -58,25 +58,29 @@
 
 <template name="qnfeedbackxq">
     <header id="header">
-        <a href="javascript:history.go(-1);" class="back"><img src="/images/mark1.png"></a>
+        <a href="/questionnaire" class="back"><span></span></a>
         <span class="category_h_title">问卷调查</span>
     </header>
 
-    <section class="content pad padb pad10">
-        <div style="display:block;text-align:center;">{{questionnairexq.qnairetitle}}</div>
-        {{#each questionnairexq.questionlist}}
-            <div class="qnfeedbackxz">
-                <div class="title"><span>{{questioncontent}}</span></div>
-                <ul>
+    <section id="content">
+        <div class="qnfeedbackxz">
+            <div class="title">{{questionnairexq.qnairetitle}}</div>
+            <section class="jcd_form">
+                {{#each questionnairexq.questionlist}}
+                <section class="jcd_form_chickbox jcd_form_block">
+                    <div class="questioncontent"><span>{{questioncontent}}</span></div>
+                    <ul class="jcd_btnselectchild">
                     {{#each answerlist}}
                         {{#if checked}}
-                            <li style="background-color: #009900;">{{answercontent}}</li>
+                            <li class="sel"><span style="margin-left:10px;">{{answercontent}}</span></li>
                         {{else}}
-                            <li>{{answercontent}}</li>
+                            <li><span style="margin-left:10px;">{{answercontent}}</span></li>
                         {{/if}}
                     {{/each}}
-                </ul>
-            </div>
-        {{/each}}
+                    </ul>
+                </section>
+                {{/each}}
+            </section>
+        </div>
     </section>
 </template>

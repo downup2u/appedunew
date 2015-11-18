@@ -49,7 +49,7 @@ Template.qnfeedbackxz.events({
         var qnaire = dbQuestionnaire.findOne({'_id':this.qnid});
         for(var i=0;i<qnaire['questionlist'].length;i++){
             var question = qnaire['questionlist'][i];
-            var qval = $('input:radio:checked',"#"+question['questionid']).val();
+            var qval = $('.sel',"#"+question['questionid']).data('val');
             //反馈表中解答记录
             qfanswerlist.push({'questionid': question['questionid'],'questionanswer':qval});
             for(var j=0;j<question['answerlist'].length;j++){
