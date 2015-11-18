@@ -28,7 +28,8 @@ Template.onRendered(function () {
 			}
 			$('.jcd_form .jcd_form_chickbox_lnk').each(function(index, element) {
 				$(this).click(function(){
-					$('.jcd_form .jcd_form_chickbox_lnk').removeClass('sel');
+					//$('.jcd_form .jcd_form_chickbox_lnk').removeClass('sel');
+					$(".jcd_form_chickbox_lnk", $(this).parent()).removeClass('sel');//luforn 2015-11-18 20:39
 					$(this).addClass('sel');
 				})
 			});

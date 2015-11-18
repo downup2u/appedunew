@@ -33,14 +33,6 @@ Template.qnfeedbackxz.events({
             $('#'+qid).removeClass('uncheck');
         }
     },
-    'click .jcd_form_chickbox_lnk':function(event){
-        event.preventDefault();
-        var curel = $(event.target);
-        $.each($('.jcd_form_chickbox_lnk',curel.parent()),function(){
-            $(this).removeClass('sel');
-        });
-        curel.addClass('sel');
-    },
     'click #qnxzbtn':function(event){
        event.preventDefault();
         if($('.uncheck').length>0){
