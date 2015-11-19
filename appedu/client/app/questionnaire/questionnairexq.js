@@ -50,7 +50,6 @@ Template.qnfeedbackxz.events({
         for(var i=0;i<qnaire['questionlist'].length;i++){
             var question = qnaire['questionlist'][i];
             var qval = $("#"+question['questionid']+" > .sel").attr('selval');
-            console.log(qval);
             //反馈表中解答记录
             qfanswerlist.push({'questionid': question['questionid'],'questionanswer':qval});
             for(var j=0;j<question['answerlist'].length;j++){
