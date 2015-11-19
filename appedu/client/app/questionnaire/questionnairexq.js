@@ -49,7 +49,7 @@ Template.qnfeedbackxz.events({
         var qnaire = dbQuestionnaire.findOne({'_id':this.qnid});
         for(var i=0;i<qnaire['questionlist'].length;i++){
             var question = qnaire['questionlist'][i];
-            var qval = $('.sel',"#"+question['questionid']).data('val');
+            var qval = $('input',"#"+question['questionid']+" > .sel").val();
             //反馈表中解答记录
             qfanswerlist.push({'questionid': question['questionid'],'questionanswer':qval});
             for(var j=0;j<question['answerlist'].length;j++){
@@ -63,9 +63,10 @@ Template.qnfeedbackxz.events({
 
         qfDoc['questionlist'] = qfanswerlist;
         Meteor.call('insertQnfeedback', qfDoc,function(){
-            Meteor.call('updateQuestionnaire', {'_id':this.qnid},qnaire);
+            Meteor.call('updateQuestionnaire', {'_id':this.qnid},qnaire,function(){
+                Router.go("/questionnaire");
+            });
         });
-        Router.go("/questionnaire");
     }
 });
 
