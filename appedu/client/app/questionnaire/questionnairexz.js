@@ -30,7 +30,8 @@ Template.questionnairexz.events({
                 'createuserid': Meteor.userId(),
                 'createusername': Meteor.user().username,
                 'createtime': moment().format('YYYY-MM-DD'),
-                'classtermid': Meteor.user().profile.curclasstermid
+                'classtermid': Meteor.user().profile.curclasstermid,
+                'submitcount':0
             };
             var questionlist = [];
             $("div[class='qnairecontentdiv']").each(function () {

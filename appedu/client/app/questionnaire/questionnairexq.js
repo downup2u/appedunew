@@ -36,7 +36,7 @@ Template.qnfeedbackxz.events({
     'click #qnxzbtn':function(event){
        event.preventDefault();
         if($('.uncheck').length>0){
-            alert('请完成所有问题解答，再提交！');
+            swal("请完成所有问题解答，再提交！");
             return ;
         }
         var qfDoc = {
@@ -64,6 +64,7 @@ Template.qnfeedbackxz.events({
 
         qfDoc['questionlist'] = qfanswerlist;
         Meteor.call('insertQnfeedback', qfDoc,function(){
+            qnaire['submitcount'] = qnaire['submitcount']+1;//新的家长接受问卷调查并提交了答案
             Meteor.call('updateQuestionnaire', {'_id':qnaire['_id']},qnaire,function(){
                 Router.go("/questionnaire");
             });
