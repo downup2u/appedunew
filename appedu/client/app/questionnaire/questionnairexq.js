@@ -27,6 +27,7 @@ Template.qnfeedbackxz.helpers({
 
 Template.qnfeedbackxz.events({
     'click input[type="radio"]':function(event){
+        event.preventDefault();
         var qid = $(event.target).attr('name');
         if($('#'+qid).hasClass('uncheck')){
             $('#'+qid).removeClass('uncheck');
@@ -35,7 +36,7 @@ Template.qnfeedbackxz.events({
     'click #qnxzbtn':function(event){
        event.preventDefault();
         if($('.uncheck').length>0){
-            alert('请完成所有问题解答，再提交！');
+            swal("请完成所有问题解答，再提交！");
             return ;
         }
         var qfDoc = {
@@ -48,7 +49,7 @@ Template.qnfeedbackxz.events({
         var qnaire = dbQuestionnaire.findOne({'_id':this.qnid});
         for(var i=0;i<qnaire['questionlist'].length;i++){
             var question = qnaire['questionlist'][i];
-            var qval = $('input:radio:checked',"#"+question['questionid']).val();
+            var qval = $("#"+question['questionid']+" > .sel").attr('selval');
             //反馈表中解答记录
             qfanswerlist.push({'questionid': question['questionid'],'questionanswer':qval});
             for(var j=0;j<question['answerlist'].length;j++){
@@ -62,9 +63,11 @@ Template.qnfeedbackxz.events({
 
         qfDoc['questionlist'] = qfanswerlist;
         Meteor.call('insertQnfeedback', qfDoc,function(){
-            Meteor.call('updateQuestionnaire', {'_id':this.qnid},qnaire);
+            qnaire['submitcount'] = qnaire['submitcount']+1;//新的家长接受问卷调查并提交了答案
+            Meteor.call('updateQuestionnaire', {'_id':qnaire['_id']},qnaire,function(){
+                Router.go("/questionnaire");
+            });
         });
-        Router.go("/questionnaire");
     }
 });
 

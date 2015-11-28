@@ -1,0 +1,8 @@
+.meteor/local
+.meteor/.id
+.meteor/meteorite
+.meteor/.gitignore
+.meteor/platforms
+.meteor/versions
+.idea
+
